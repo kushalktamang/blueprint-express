@@ -5,24 +5,25 @@
 ## Features
 
 - **MERN Structure**: Used for building project related to MERN stack
-- **DATABASE**: Mongodb with mongoose 
-- **OXT**: Oxfmt for formatting and Oxlint for linting 
+- **DATABASE**: Mongodb with mongoose
+- **OXT**: Oxfmt for formatting and Oxlint for linting
 
-## Quickstart 
+## Quickstart
 
 ### Prerequisites
 
-- Nodejs 22+ 
+- Nodejs 22+
 - typescript 7+
 
 ### Installation
 
-1. Clone the repository 
+1. Clone the repository
 
 ```bash
 git clone https://github.com/kushalktamang/blueprint-express.git
 cd blueprint-express
 ```
+
 2. Install Dependencies:
 
 ```bash
