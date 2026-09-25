@@ -1,0 +1,42 @@
+{
+   "compilerOptions": {
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "target": "ESNext",
+      "types": [
+         "node"
+      ],
+      "paths": {
+         "@/*": [
+            "./src/*"
+         ]
+      },
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noEmitOnError": true,
+      "noUncheckedIndexedAccess": true,
+      "noImplicitOverride": true,
+      "noFallthroughCasesInSwitch": true,
+      "skipLibCheck": true,
+      "noUncheckedSideEffectImports": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "allowUnusedLabels": false,
+      "allowUnreachableCode": false,
+      // "noPropertyAccessFromIndexSignature": true,
+      "erasableSyntaxOnly": true,
+      "noErrorTruncation": false,
+      "exactOptionalPropertyTypes": true
+   },
+   "include": [
+      "src"
+   ],
+   "exclude": [
+      "node_modules",
+      "dist"
+   ]
+}
