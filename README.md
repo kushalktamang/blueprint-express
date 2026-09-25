@@ -1,10 +1,10 @@
-# Blueprint for Express and Typescript
+# Blueprint For Express With Typescript
 
-An express with typescript template that i can use in every other project without starting from the basic
+> An express with typescript template that I can use in every other project without starting from the start.
 
 ## Features
 
-- **MERN Structure**: Use for building project related to MERN stack
+- **MERN Structure**: Used for building project related to MERN stack
 - **DATABASE**: Mongodb with mongoose 
 - **OXT**: Oxfmt for formatting and Oxlint for linting 
 
