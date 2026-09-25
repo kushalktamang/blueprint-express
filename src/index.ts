@@ -1,6 +1,7 @@
+import env from "./config/env.js";
 import createServer from "./server.js";
 
-const PORT = 3000;
+const PORT = Math.trunc(Number(env.PORT));
 
 const server = createServer().listen(PORT, () => {
   console.log(`SERVER READY AT: http://localhost:${PORT}`);
