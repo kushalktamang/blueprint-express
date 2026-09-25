@@ -9,7 +9,7 @@ const createServer = (): Express => {
   server.use(express.json());
   server.use(cookieParser());
 
-  // GET /api/v1/healthz
+  // @GET /api/v1/healthz
   server.use("/api/v1/", checkHealth());
 
   return server;

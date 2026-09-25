@@ -27,7 +27,6 @@
       "noUnusedParameters": true,
       "allowUnusedLabels": false,
       "allowUnreachableCode": false,
-      // "noPropertyAccessFromIndexSignature": true,
       "erasableSyntaxOnly": true,
       "noErrorTruncation": false,
       "exactOptionalPropertyTypes": true
