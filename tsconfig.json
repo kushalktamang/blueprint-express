@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "rootDir": "./src",
     "outDir": "./dist",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "target": "ESNext",
     "types": ["node"],
     "paths": {
       "@/*": ["./src/*"]
     },
+    "strict": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "noEmitOnError": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,

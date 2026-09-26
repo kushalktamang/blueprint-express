@@ -1,27 +1,29 @@
 import winston from "winston";
-import env from "./env";
+import env from "./env.js";
 
 const log_level = env.LOG_LEVEL;
+const { combine, timestamp, errors, colorize, json, simple } = winston.format;
 
 const logger = winston.createLogger({
   level: log_level,
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json(),
-    winston.format.colorize(),
+  format: combine(
+    timestamp({ format: "YYYY-MM-DD hh:mm:ss.SSS A" }),
+    errors({ stack: true }),
+    json(),
   ),
   defaultMeta: { service: "blueprint-express" },
   transports: [
     new winston.transports.File({ filename: "logs/error.log", level: "error" }),
     new winston.transports.File({ filename: "logs/combined.log" }),
   ],
+  exceptionHandlers: [new winston.transports.File({ filename: "logs/exception.log" })],
+  rejectionHandlers: [new winston.transports.File({ filename: "logs/rejections.log" })],
 });
 
 if (process.env.NODE_ENV !== "production") {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.combine(winston.format.simple(), winston.format.colorize()),
+      format: winston.format.combine(colorize(), simple()),
     }),
   );
 }
