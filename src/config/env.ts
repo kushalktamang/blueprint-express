@@ -15,6 +15,7 @@ const envSchema = z.object({
   NODE_ENV: z.enum(["development", "staging", "production"]).default("development"),
   PORT: z.string().default("8081"),
   LOG_LEVEL: z.enum(["error", "warn", "info", "http", "verbose", "debug", "silly"]).default("info"),
+  DATABASE_URL: z.string(),
 });
 
 const env = envSchema.parse(process.env);

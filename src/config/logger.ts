@@ -13,8 +13,8 @@ const logger = winston.createLogger({
   ),
   defaultMeta: { service: "blueprint-express" },
   transports: [
-    new winston.transports.File({ filename: "logs/error.log", level: "error" }),
     new winston.transports.File({ filename: "logs/combined.log" }),
+    new winston.transports.File({ filename: "logs/error.log", level: "error" }),
   ],
   exceptionHandlers: [new winston.transports.File({ filename: "logs/exception.log" })],
   rejectionHandlers: [new winston.transports.File({ filename: "logs/rejections.log" })],

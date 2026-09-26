@@ -18,3 +18,21 @@ tasks:
     lint:
     cmds:
       - node --run lint
+
+  migrate:
+    desc: migrating
+    lint:
+    cmds:
+      - node --run migrate
+
+  generate:
+    desc: generate
+    lint:
+    cmds:
+      - node --run generate
+
+  studio:
+    desc: drizzle studio
+    lint:
+    cmds:
+      - node --run studio

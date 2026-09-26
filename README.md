@@ -4,9 +4,11 @@
 
 ## Features
 
-- **MERN Structure**: Used for building project related to MERN stack
-- **DATABASE**: Mongodb with mongoose
-- **OXT**: Oxfmt for formatting and Oxlint for linting
+- **Structure**: Used for building project related to PERN stack
+- **DATABASE**: PostgresSQL with Drizzle ORM
+- **OXC**: Oxfmt for formatting and Oxlint for linting
+- **Logging**: Winston for logging
+- **Validation**: Zod for schema validation
 
 ## Quickstart
 
