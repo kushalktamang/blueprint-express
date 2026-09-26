@@ -39,4 +39,15 @@ pnpm install
 task dev
 ```
 
+4. For database migration
+```bash
+task generate
+task migration
+```
+
+5. Drizzle Studio
+```bash
+task studio
+```
+
 The API will be available at `http://localhost:8080`
