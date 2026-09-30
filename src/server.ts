@@ -7,6 +7,7 @@ import helmet from "helmet";
 import logger from "./config/logger.js";
 import httpStatus from "http-status";
 import morganMiddleware from "./middleware/morgan.js";
+import notFound from "./middleware/not-found.js";
 
 const createServer = (): Express => {
   const server = express();
@@ -25,6 +26,9 @@ const createServer = (): Express => {
 
   // @GET /api/v1/healthz
   server.use("/api/v1/", checkHealth());
+
+  // error handling for 404  route not found
+  server.use(notFound);
 
   return server;
 };
