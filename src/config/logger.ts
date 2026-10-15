@@ -1,4 +1,5 @@
 import winston from "winston";
+
 import env from "./env.js";
 
 const log_level = env.LOG_LEVEL;
@@ -20,12 +21,12 @@ const logger = winston.createLogger({
   rejectionHandlers: [new winston.transports.File({ filename: "logs/rejections.log" })],
 });
 
-if (process.env.NODE_ENV !== "production") {
-  logger.add(
-    new winston.transports.Console({
-      format: winston.format.combine(colorize(), simple()),
-    }),
-  );
-}
+logger.add(
+  process.env.NODE_ENV === "production"
+    ? new winston.transports.Console()
+    : new winston.transports.Console({
+        format: combine(colorize(), simple()),
+      }),
+);
 
 export default logger;

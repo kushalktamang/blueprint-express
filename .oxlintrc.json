@@ -1,37 +1,26 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "options": {
-    "typeAware": true
+    "typeAware": true,
+    "typeCheck": true
   },
-  "plugins": ["typescript", "unicorn", "import"],
+  "plugins": ["typescript", "unicorn", "import", "oxc"],
   "categories": {
     // Code that is flat-out wrong — always a hard error
     "correctness": "error",
     // Code that's very likely a mistake
     "suspicious": "error",
-    // Nitpicky style stuff — warn, don't block
-    "pedantic": "warn",
-    // Formatting/consistency preferences — warn only
-    "style": "warn",
-    // Performance smells — warn only
-    "perf": "warn"
+    // Performance smells 
+    "perf": "error"
   },
   "rules": {
-    "sort-imports": "off",
-    "sort-vars": "off",
-    "one-var": "off",
-    "sort-keys": "off",
-    "no-magic-numbers": "off",
-    "no-ternary": "off",
-    "id-length": "off",
-    "import/no-named-export": "off",
-    "capitalized-comments": "off",
-    "arrow-body-style": "off",
-    "no-console": "off",
-    "no-debugger": "error",
-    "unicorn/no-null": "off",
-    "no-duplicate-imports": "off",
-    "new-cap": "off",
+    "eslint/no-await-in-loop": "off",
+    "no-console": ["error", { "allow": ["error"] }],
+    "no-shadow": "off",
+    "typescript/no-unnecessary-boolean-literal-compare": "off",
+    "typescript/no-unnecessary-type-arguments": "off",
+    "typescript/no-unsafe-type-assertion": "off",
+    "curly": "error",
 
     "import/no-unassigned-import": [
       "warn",
@@ -52,7 +41,6 @@
     "typescript/no-unsafe-call": "error",
     "typescript/no-unsafe-member-access": "error",
     "typescript/no-unsafe-return": "error",
-    "typescript/no-unsafe-type-assertion": "error",
     "typescript/no-floating-promises": "error",
     "typescript/no-misused-promises": "error",
     "typescript/await-thenable": "error",

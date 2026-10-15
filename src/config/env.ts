@@ -1,6 +1,7 @@
+import path from "path";
+
 import { config } from "dotenv";
 import { z } from "zod";
-import path from "path";
 
 // load env files from only dev/test only
 if (process.env.NODE_ENV !== "production") {

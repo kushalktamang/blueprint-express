@@ -1,13 +1,14 @@
-import checkHealth from "./routes/healthz.js";
-import cors from "cors";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import express from "express";
 import type { Express } from "express";
 import helmet from "helmet";
-import logger from "./config/logger.js";
 import httpStatus from "http-status";
+
+import logger from "./config/logger.js";
 import morganMiddleware from "./middleware/morgan.js";
 import notFound from "./middleware/not-found.js";
+import checkHealth from "./routes/healthz.js";
 
 const createServer = (): Express => {
   const server = express();
@@ -25,7 +26,7 @@ const createServer = (): Express => {
   });
 
   // @GET /api/v1/healthz
-  server.use("/api/v1/", checkHealth());
+  server.use("/v1/", checkHealth());
 
   // error handling for 404  route not found
   server.use(notFound);
