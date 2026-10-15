@@ -10,7 +10,7 @@
     "correctness": "error",
     // Code that's very likely a mistake
     "suspicious": "error",
-    // Performance smells 
+    // Performance smells
     "perf": "error"
   },
   "rules": {
